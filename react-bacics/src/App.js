@@ -8,21 +8,61 @@ const name = "Josh"
   return (
     <div className="App">
       <div className="board">
+        <Catz txt="state abrev"></Catz>
+        <Catz txt="Celebrity Relatives"></Catz>
+        <Catz txt="Name That Instrument!"></Catz>
+        <Catz txt="-Ology"></Catz>
+        <Catz txt="Slang Terms"></Catz>
+        <Catz txt="State Abreviations"></Catz>
+        <Card number={100}></Card>
+        <Card number={100}></Card>
+        <Card number={100}></Card>
+        <Card number={100}></Card>
+        <Card number={100}></Card>
+        <Card number={100}></Card>
+        <Card number={200}></Card>
+        <Card number={200}></Card>
+        <Card number={200}></Card>
+        <Card number={200}></Card>
+        <Card number={200}></Card>
+        <Card number={200}></Card>
+        <Card number={300}></Card>
+        <Card number={300}></Card>
+        <Card number={300}></Card>
+        <Card number={300}></Card>
+        <Card number={300}></Card>
+        <Card number={300}></Card>
+        <Card number={400}></Card>
+        <Card number={400}></Card>
+        <Card number={400}></Card>
+        <Card number={400}></Card>
+        <Card number={400}></Card>
+        <Card number={400}></Card>
+        <Card number={500}></Card>
+        <Card number={500}></Card>
+        <Card number={500}></Card>
+        <Card number={500}></Card>
+        <Card number={500}></Card>
+        <Card number={500}></Card>
 
       </div>
-      {/* <h1>Hello World</h1>
-      <Fakehtml></Fakehtml>
-      <h2>{name}</h2>
-      <h2>{age}</h2>
-      <h2>what state is </h2> */}
     </div>
   );
 }
-function Card() {
-  return{
-    <div style={}
-  }
+function Card({number}) {
+  return(
+    <div className="card">
+      <p>${number}</p>
+    </div>
+  )
   
+}
+function Catz({txt}) {
+  return(
+    <div className='title'>
+      <p>{txt}</p>
+    </div>
+  )
 }
 function Fakehtml() {
   const clickHandlers = ()=>{
