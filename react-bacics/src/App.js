@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-const[age,setAge] = useState(53)
-const name = "Josh"
+
+const[question,setQuestion] = useState("")
 
   return (
     <div className="App">
@@ -14,8 +14,8 @@ const name = "Josh"
         <Catz txt="-Ology"></Catz>
         <Catz txt="Slang Terms"></Catz>
         <Catz txt="State Abreviations"></Catz>
-        <Card number={100}></Card>
-        <Card number={100}></Card>
+        <Card number={100} question = "Shekkles" setQuestion = {setQuestion}></Card>
+        <Card number={100} question = "Jake Paul" setQuestion = {setQuestion}></Card>
         <Card number={100}></Card>
         <Card number={100}></Card>
         <Card number={100}></Card>
@@ -44,15 +44,26 @@ const name = "Josh"
         <Card number={500}></Card>
         <Card number={500}></Card>
         <Card number={500}></Card>
-
+        {question ? <Module question={question} setQuestion={setQuestion}></Module> : null}
       </div>
     </div>
   );
 }
-function Module({})
-function Card({number}) {
+function Module({question, setQuestion}) {
   const clickHandler = ()=>{
-    prompt("HELLO?")
+    setQuestion("")
+  }
+  return(
+    <div className='parentMod' onClick={clickHandler}>
+      <div className='mod'>
+        <h1>{question}</h1>
+      </div>
+    </div>
+  )
+}
+function Card({number, question, setQuestion}) {
+  const clickHandler = ()=>{
+    setQuestion(question)
   }
   return(
     <div className="card" onClick={clickHandler}>
