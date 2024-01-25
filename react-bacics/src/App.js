@@ -16,8 +16,8 @@ const[question,setQuestion] = useState("")
         <Catz txt="State Abreviations"></Catz>
         <Card number={100} question = "Shekkles" setQuestion = {setQuestion}></Card>
         <Card number={100} question = "Jake Paul" setQuestion = {setQuestion}></Card>
-        <Card number={100}></Card>
-        <Card number={100}></Card>
+        <Card number={100} question="Jason Derulo made a song named after this instrument" setQuestion={setQuestion}></Card>
+        <Card number={100} question = "The study of human history and prehistory through excavation" setQuestion={setQuestion}></Card>
         <Card number={100}></Card>
         <Card number={100}></Card>
         <Card number={200}></Card>
