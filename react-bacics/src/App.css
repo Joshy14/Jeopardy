@@ -5,6 +5,8 @@
 }
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -14,6 +16,7 @@
 .board{
   display: grid;
   grid-template-columns: repeat(6,minmax(0,1fr));
+  margin:0px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -45,15 +48,6 @@
   
 }
 
-
-
-
-
-
-
-
-
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -67,6 +61,36 @@
 
 .App-link {
   color: #61dafb;
+}
+.App{
+  height: 100vh;
+}
+.card:hover{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(50, 50, 250);
+  color:rgb(245, 202, 49);
+  border-color: rgb(12, 12, 88);
+  border-width: 5px;
+  border-style: solid;
+  height: 7em;
+}
+.father{
+
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.soccerMom{
+  background-color: #4050de;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .card{
   display: flex;

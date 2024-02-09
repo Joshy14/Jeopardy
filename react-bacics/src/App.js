@@ -14,17 +14,17 @@ const[question,setQuestion] = useState("")
         <Catz txt="-Ology"></Catz>
         <Catz txt="Slang Terms"></Catz>
         <Catz txt="State Abreviations"></Catz>
-        <Card number={100} question = "Shekkles" setQuestion = {setQuestion}></Card>
+        <Card number={100} question = "Afghani" setQuestion = {setQuestion}></Card>
         <Card number={100} question = "Jake Paul" setQuestion = {setQuestion}></Card>
         <Card number={100} question="Jason Derulo made a song named after this instrument" setQuestion={setQuestion}></Card>
         <Card number={100} question = "The study of human history and prehistory through excavation" setQuestion={setQuestion}></Card>
-        <Card number={100}></Card>
-        <Card number={100}></Card>
-        <Card number={200}></Card>
-        <Card number={200}></Card>
-        <Card number={200}></Card>
-        <Card number={200}></Card>
-        <Card number={200}></Card>
+        <Card number={100} question = " ''Cap'' " setQuestion={setQuestion}></Card>
+        <Card number={100} question = "''IL.''" setQuestion={setQuestion}></Card>
+        <Card number={200} question = "Real" setQuestion={setQuestion}></Card>
+        <Card number={200} question = "Scott Swift" setQuestion={setQuestion}></Card>
+        <Card number={200} question = "High pitched, woody, sort of sound." setQuestion={setQuestion}></Card>
+        <Card number={200} question = "The study of humans" setQuestion={setQuestion}></Card>
+        <Card number={200} question = "''Rizz''" setQuestion={setQuestion}></Card>
         <Card number={200}></Card>
         <Card number={300}></Card>
         <Card number={300}></Card>
@@ -46,8 +46,18 @@ const[question,setQuestion] = useState("")
         <Card number={500}></Card>
         {question ? <Module question={question} setQuestion={setQuestion}></Module> : null}
       </div>
+      <Score></Score>
     </div>
   );
+}
+function Score(){
+return(
+  <div className="father">
+    <div className="soccerMom">
+      <h1>test</h1>
+    </div>
+  </div>
+)
 }
 function Module({question, setQuestion}) {
   const clickHandler = ()=>{
