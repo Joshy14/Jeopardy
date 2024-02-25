@@ -116,7 +116,19 @@
   border-style: solid;
   height: 7em;
 }
-
+.clicked{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #163191;
+  color:rgb(255, 200, 0);
+  border-color: rgb(0, 0, 49);
+  border-width: 5px;
+  border-style: solid;
+  height: 7em;
+  
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
