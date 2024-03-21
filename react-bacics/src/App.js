@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import './App.css';
+// function teamMaker(){
+  
+//   return(
+//     <div className='createTeam'></div>
+//   )
+// } 
 
 function App() {
 
 const[question,setQuestion] = useState("")
 const[lastClicked,setLastClicked] = useState(0)
 const[scores,setScores] = useState([{"name":"Messi","score":300}])
-
+//const teamAdd = ()=>{setScores(...scores,{""}) }
 
   return (
     <div className="App">
@@ -49,18 +55,70 @@ const[scores,setScores] = useState([{"name":"Messi","score":300}])
         <Card number={500} setLastClicked={setLastClicked}></Card>
         {question ? <Module question={question} setQuestion={setQuestion}></Module> : null}
       </div>
-      <Score lastClicked={lastClicked} teamName={scores[0].name} score = {scores[0].score}></Score>
+        <Score lastClicked={lastClicked} teamName={scores[0].name} score = {scores[0].score} scores = {scores} setScores={setScores} teamNumber={0}></Score>
+        
     </div>
   );
 }
-function Score({lastClicked, teamName,score}){
+function TeamScreen(){
+  return(
+    <div className="teamScreen">
+      <h1 className='pluh'>Add Team</h1>
+      <input className='inputName' placeholder='Enter Your Team Name'></input>
+      <button className='save'>Save</button>
+    </div>
+  )
+}
+function Score({lastClicked, teamName, score, setScores, teamNumber,scores}){
+  const [crock,setCrock] = useState(false)
+  const teamAdder = ()=>{
+
+  }
+
+  const addPoints = (name, scoreToAdd) =>{
+    console.log(scoreToAdd)
+      // Find the index of the team "Messi" in the array
+    const teamIndex = scores.findIndex(team => team.name === name);
+
+    // If "Messi" is found, update its score
+    if (teamIndex !== -1) {
+      // Create a new array to avoid mutating the state directly
+      const newScores = [...scores];
+      newScores[teamIndex].score += scoreToAdd;
+      
+      // Set the updated array as the new state
+      setScores(newScores);
+  }
+}
+
+const minusPoints = (name, scoreToMinus) =>{
+  console.log(scoreToMinus)
+  const teamIndex = scores.findIndex(team => team.name === name);
+  if(teamIndex !== -1) {
+    const newScores = [...scores]
+    newScores[teamIndex].score -= scoreToMinus;
+    setScores(newScores)
+  }
+
+}
+
 return(
   <div className="father">
     <div className="soccerMom">
-      <h1>{teamName}</h1>
-      <h2>{score}</h2>
+        <h1>{teamName}</h1>
+      <div className='addSub'>
+        <div className='subtractPt'  onClick={()=>{minusPoints(teamName, lastClicked)}}>-</div>
+        <h2>{score}</h2>
+        <div className='addPt' onClick={()=>{addPoints(teamName, lastClicked)}}>+</div>
+      </div>
     </div>
-  </div>
+    <div className="scoreBar"></div>
+      <div className="addTeam" onClick={()=>{setCrock(true)}}>
+          <h1>+</h1>
+          <h3>Add Team</h3>
+          {crock==true ? <TeamScreen></TeamScreen> : null}
+       </div>
+    </div>
 )
 }
 function Module({question, setQuestion}) {

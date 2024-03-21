@@ -8,7 +8,24 @@
   display: flex;
   flex-direction: column;
 }
-
+.father{
+  background-color: darkblue;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.scoreBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.scoreBar{
+  background-color: rgb(161, 161, 161);
+  border-radius: 12px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -47,7 +64,44 @@
 
   
 }
-
+.inputName{
+  border-radius: 12px;
+  height: 5%;
+  width:30%;
+  background-color: #a8b9f7;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.save{
+  margin:5%;
+  background-color: #4050de;
+  height: 5%;
+  width: 7%;
+  border-radius: 13px;
+}
+.pluh{
+  margin-bottom: 15%;
+}
+.teamScreen{
+  color: rgb(187, 203, 255);
+  position: fixed;
+  width: 75%;
+  height: 70%;
+  border-width: 3px;
+  border-color: #363c53;
+  border-radius: 25px;
+  background-color: rgb(20, 20, 97);
+  left: 12.5%;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 250%;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -77,12 +131,25 @@
   border-style: solid;
   height: 7em;
 }
-.father{
 
-  width: 100vw;
+.subtractPt{
+  background-color: red;
+  border-radius: 7.2px;
+  margin: 10px;
+  padding: 7px;
+  font-size: 27px;
+}
+.addSub{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+}
+.addPt{
+  background-color: green;
+  border-radius: 7.2px;
+  margin: 10px;
+  padding: 7px;
+  font-size: 25px;
 }
 .soccerMom{
   background-color: #4050de;
@@ -91,6 +158,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 7.2px;
 }
 .card{
   display: flex;
