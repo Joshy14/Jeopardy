@@ -46,6 +46,15 @@
   position: fixed;
   backdrop-filter: blur(8px);
 }
+.bgBlur{
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  backdrop-filter: blur(8px);
+}
 .mod{
   color: white;
   position: fixed;
@@ -101,6 +110,7 @@
   align-items: center;
   text-align: center;
   font-size: 250%;
+  z-index: 3;
 }
 .App-header {
   background-color: #282c34;

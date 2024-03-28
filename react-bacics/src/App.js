@@ -60,17 +60,21 @@ const[scores,setScores] = useState([{"name":"Messi","score":300}])
     </div>
   );
 }
-function TeamScreen(){
+function TeamScreen({setCrock}){
   return(
-    <div className="teamScreen">
-      <h1 className='pluh'>Add Team</h1>
-      <input className='inputName' placeholder='Enter Your Team Name'></input>
-      <button className='save'>Save</button>
+    <div className='bgBlur' onClick={()=>{
+      setCrock(false)
+    }}>
+      <div className="teamScreen" onClick={(event)=>event.stopPropagation()}>
+        <h1 className='pluh' >Add Team</h1>
+        <input className='inputName' placeholder='Enter Your Team Name' ></input>
+        <button className='save' >Save</button>
+      </div>
     </div>
   )
 }
 function Score({lastClicked, teamName, score, setScores, teamNumber,scores}){
-  const [crock,setCrock] = useState(false)
+  const [crock, setCrock] = useState(false)
   const teamAdder = ()=>{
 
   }
@@ -116,8 +120,9 @@ return(
       <div className="addTeam" onClick={()=>{setCrock(true)}}>
           <h1>+</h1>
           <h3>Add Team</h3>
-          {crock==true ? <TeamScreen></TeamScreen> : null}
-       </div>
+
+    </div>
+       {crock==true ? <TeamScreen setCrock={setCrock}></TeamScreen> : null}
     </div>
 )
 }
@@ -127,20 +132,24 @@ function Module({question, setQuestion}) {
   }
   return(
     <div className='parentMod' onClick={clickHandler}>
-      <div className='mod'>
+      <div className='mod' onClick={(event)=>event.stopPropagation()}>
         <h1>{question}</h1>
       </div>
     </div>
   )
 }
 function Card({number, question, cardquestion, setQuestion, setLastClicked}) {
+  //create clicked state to keep track of which ones were already clicked.
+  const[clicked, setClicked] = useState(false)
   const clickHandler = ()=>{
+    setClicked(true)
     setQuestion(cardquestion)
     setLastClicked(number)
     //.style.backgroundColor = "#fffff"
   }
   return(
-    <div className={question == cardquestion? "clicked": "card"}onClick={clickHandler}>
+    //if clicked is true, set it to the clicked CSS(greyed out). else set to card CSS.
+    <div className={clicked? "clicked": "card"}onClick={clickHandler}>
       <p>${number}</p>
      
     </div>
