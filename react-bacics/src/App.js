@@ -11,10 +11,12 @@ function App() {
 
 const[question,setQuestion] = useState("")
 const[lastClicked,setLastClicked] = useState(0)
-const[scores,setScores] = useState([{"name":"Messi","score":300}])
+const[scores,setScores] = useState([])
+const [crock, setCrock] = useState(false)
 //const teamAdd = ()=>{setScores(...scores,{""}) }
-
-  return (
+const scoreCards = scores.map(score => <Score lastClicked={lastClicked} teamName={score.name} score = {score.score} scores = {scores} setScores={setScores} teamNumber={0} crock={crock} setCrock={setCrock}></Score>)
+  
+return (   
     <div className="App">
       <div className="board">
         <Catz txt="Foreign Currencies"></Catz>
@@ -46,39 +48,52 @@ const[scores,setScores] = useState([{"name":"Messi","score":300}])
         <Card number={400} question={question} cardquestion = "Large string instrument played with fingers" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
         <Card number={400} question={question} cardquestion = "The study of eggs" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
         <Card number={400} question={question} cardquestion = "Gatekeeping(Gatekeeper)" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={400} setLastClicked={setLastClicked}></Card>
+        <Card number={400} question={question} cardquestion = "Harrisburg" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
         <Card number={500} setLastClicked={setLastClicked} ></Card>
         <Card number={500} setLastClicked={setLastClicked}></Card>
         <Card number={500} setLastClicked={setLastClicked}></Card>
         <Card number={500} setLastClicked={setLastClicked}></Card>
         <Card number={500} setLastClicked={setLastClicked}></Card>
-        <Card number={500} setLastClicked={setLastClicked}></Card>
+        <Card number={500} question={question} cardquestion = "Helena" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
         {question ? <Module question={question} setQuestion={setQuestion}></Module> : null}
       </div>
-        <Score lastClicked={lastClicked} teamName={scores[0].name} score = {scores[0].score} scores = {scores} setScores={setScores} teamNumber={0}></Score>
+      {/* <Score lastClicked={lastClicked} teamName={scores[0].name} score = {scores[0].score} scores = {scores} setScores={setScores} teamNumber={0}></Score> */}
+      <div className='father'>
+        {scoreCards}
+      <div className="addTeam" onClick={()=>{setCrock(true)}}>
+          <h1>+</h1>
+          <h3>Add Team</h3>
+    </div></div>
+      
+       {crock==true ? <TeamScreen setScores={setScores} scores={scores} setCrock={setCrock}></TeamScreen> : null}
+    
         
     </div>
   );
 }
-function TeamScreen({setCrock}){
-  return(
+function TeamScreen({setCrock, scores, setScores}){
+const clickHandler = ()=>{
+  const h = document.querySelector(".inputName")
+ const newTeam = {"name":h.value,"score":0}
+setScores([...scores,newTeam])
+setCrock(false)
+}
+  return (
     <div className='bgBlur' onClick={()=>{
       setCrock(false)
     }}>
       <div className="teamScreen" onClick={(event)=>event.stopPropagation()}>
         <h1 className='pluh' >Add Team</h1>
         <input className='inputName' placeholder='Enter Your Team Name' ></input>
-        <button className='save' >Save</button>
+        <button className='save' onClick={()=>{ 
+      clickHandler()
+    }}>Save</button>
       </div>
     </div>
   )
 }
-function Score({lastClicked, teamName, score, setScores, teamNumber,scores}){
-  const [crock, setCrock] = useState(false)
-  const teamAdder = ()=>{
-
-  }
-
+function Score({lastClicked, teamName, score, setScores, teamNumber,scores, setCrock, crock}){
+  
   const addPoints = (name, scoreToAdd) =>{
     console.log(scoreToAdd)
       // Find the index of the team "Messi" in the array
@@ -107,7 +122,7 @@ const minusPoints = (name, scoreToMinus) =>{
 }
 
 return(
-  <div className="father">
+ 
     <div className="soccerMom">
         <h1>{teamName}</h1>
       <div className='addSub'>
@@ -116,14 +131,7 @@ return(
         <div className='addPt' onClick={()=>{addPoints(teamName, lastClicked)}}>+</div>
       </div>
     </div>
-    <div className="scoreBar"></div>
-      <div className="addTeam" onClick={()=>{setCrock(true)}}>
-          <h1>+</h1>
-          <h3>Add Team</h3>
-
-    </div>
-       {crock==true ? <TeamScreen setCrock={setCrock}></TeamScreen> : null}
-    </div>
+    
 )
 }
 function Module({question, setQuestion}) {
