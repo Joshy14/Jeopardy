@@ -26,35 +26,36 @@ return (
         <Catz txt="-Ology"></Catz>
         <Catz txt="Slang Terms"></Catz>
         <Catz txt="State Capitals"></Catz>
-        <Card number={100} setAnswer={setAnswer} cardanswer="Afghanistan" answer={answer} question={question} cardquestion = "Afghani" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={100} setAnswer={setAnswer} cardanswer="Logan Paul's brother" answer={answer} question={question} cardquestion = "Jake Paul" setQuestion = {setQuestion}setLastClicked={setLastClicked}></Card>
-        <Card number={100} setAnswer={setAnswer} cardanswer="Crash Cymbals" answer={answer} question={question} cardquestion="Loud metalic sound created by crashing them together" setQuestion={setQuestion}setLastClicked={setLastClicked}></Card>
-        <Card number={100} setAnswer={setAnswer} cardanswer="Archeology" answer={answer} question={question} cardquestion = "The study of human history and prehistory through excavation"setLastClicked={setLastClicked} setQuestion={setQuestion}></Card>
-        <Card number={100} setAnswer={setAnswer} cardanswer="Not the truth" answer={answer} question={question} cardquestion = " ''Cap'' " setQuestion={setQuestion}setLastClicked={setLastClicked}></Card>
-        <Card number={100} setAnswer={setAnswer} cardanswer="New York" answer={answer} question={question} cardquestion = "Albany" setQuestion={setQuestion}setLastClicked={setLastClicked}></Card>
-        <Card number={200} setAnswer={setAnswer} cardanswer="India" answer={answer} question={question} cardquestion = "Rupee" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={200} setAnswer={setAnswer} cardanswer="Taylor Swift's dad" answer={answer} question={question} cardquestion = "Scott Swift" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={200} setAnswer={setAnswer} cardanswer="Clarinet" answer={answer} question={question} cardquestion = "High pitched, woody, sort of sound." setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={200} setAnswer={setAnswer} cardanswer="Anthropology" answer={answer} question={question} cardquestion = "The study of humans" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={200} setAnswer={setAnswer} cardanswer="To have romantic appeal or charm" answer={answer} question={question} cardquestion = "''Rizz''" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={200} setAnswer={setAnswer} cardanswer="California" answer={answer} question={question} cardquestion = "Sacrimento" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={300} setAnswer={setAnswer} cardanswer="Israel" answer={answer} question={question} cardquestion = "Shekels" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={300} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Denise Jonas" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={300} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Jason Derulo made a song named after this instrument" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={300} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "The study of medicine involving skin" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={300} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "''Opps''" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={300} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Baton Rouge" setQuestion={setQuestion}  setLastClicked={setLastClicked}></Card>
-        <Card number={400} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Lire" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={400} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Nancy Dow" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={400} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Large string instrument played with fingers" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={400} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "The study of eggs" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={400} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Gatekeeping(Gatekeeper)" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={400} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Harrisburg" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={500} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Dinar" setQuestion = {setQuestion} setLastClicked={setLastClicked} ></Card>
-        <Card number={500} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Maria Peinter" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card> {/*Pope Bennedict XVI mom*/}
-        <Card number={500} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Wooden bars struck with mallets to produce warm, resonant tones" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={500} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "''Dayroom''" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
-        <Card number={500} setAnswer={setAnswer} cardanswer="" answer={answer} question={question} cardquestion = "Helena" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={100} setAnswer={setAnswer} answer="Afghanistan"  question={question} cardquestion = "Afghani" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={100} setAnswer={setAnswer} answer="Logan Paul's brother"  question={question} cardquestion = "Jake Paul" setQuestion = {setQuestion}setLastClicked={setLastClicked}></Card>
+        <Card number={100} setAnswer={setAnswer} answer="Crash Cymbals"  question={question} cardquestion="Loud metalic sound created by crashing them together" setQuestion={setQuestion}setLastClicked={setLastClicked}></Card>
+        <Card number={100} setAnswer={setAnswer} answer="Archeology"  question={question} cardquestion = "The study of human history and prehistory through excavation"setLastClicked={setLastClicked} setQuestion={setQuestion}></Card>
+        <Card number={100} setAnswer={setAnswer} answer="Not the truth"  question={question} cardquestion = " ''Cap'' " setQuestion={setQuestion}setLastClicked={setLastClicked}></Card>
+        <Card number={100} setAnswer={setAnswer} answer="New York"  question={question} cardquestion = "Albany" setQuestion={setQuestion}setLastClicked={setLastClicked}></Card>
+        <Card number={200} setAnswer={setAnswer} answer="India"  question={question} cardquestion = "Rupee" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={200} setAnswer={setAnswer} answer="Taylor Swift's dad" question={question} cardquestion = "Scott Swift" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={200} setAnswer={setAnswer} answer="Clarinet"  question={question} cardquestion = "High pitched, woody, sort of sound." setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={200} setAnswer={setAnswer} answer="Anthropology"  question={question} cardquestion = "The study of humans" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={200} setAnswer={setAnswer} answer="To have romantic appeal or charm"  question={question} cardquestion = "''Rizz''" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={200} setAnswer={setAnswer} answer="California" question={question} cardquestion = "Sacrimento" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={300} setAnswer={setAnswer} answer="Israel" question={question} cardquestion = "Shekels" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={300} setAnswer={setAnswer} answer="Jonas"  question={question} cardquestion = "Denise Jonas" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={300} setAnswer={setAnswer} answer="Trumpets"  question={question} cardquestion = "Jason Derulo made a song named after this instrument" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={300} setAnswer={setAnswer} answer="Dermatology"  question={question} cardquestion = "The study of medicine involving skin" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={300} setAnswer={setAnswer} answer="Enemies - OPPositions"  question={question} cardquestion = "''Opps''" setQuestion={setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={300} setAnswer={setAnswer} answer="Louisiana"  question={question} cardquestion = "Baton Rouge" setQuestion={setQuestion}  setLastClicked={setLastClicked}></Card>
+        <Card number={400} setAnswer={setAnswer} answer="Itallian"  question={question} cardquestion = "Lira" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={400} setAnswer={setAnswer} answer="Jennifer Aniston"  question={question} cardquestion = "Nancy Dow" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={400} setAnswer={setAnswer} answer="Harp"  question={question} cardquestion = "Large string instrument played with fingers" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={400} setAnswer={setAnswer} answer="Oology"  question={question} cardquestion = "The study of eggs" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={400} setAnswer={setAnswer} answer="To not tell someone something"  question={question} cardquestion = "Gatekeeping(Gatekeeper)" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={400} setAnswer={setAnswer} answer="Pennsilvania"  question={question} cardquestion = "Harrisburg" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={500} setAnswer={setAnswer} answer="Algeria, Bahrain, Iraq, Jordan, Kuwait, Libya, Serbia, or Tunisia"  question={question} cardquestion = "Dinar" setQuestion = {setQuestion} setLastClicked={setLastClicked} ></Card>
+        <Card number={500} setAnswer={setAnswer} answer="Pope Bennedict XVI's mother"  question={question} cardquestion = "Maria Peinter" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card> {/*Pope Bennedict XVI mom*/}
+        <Card number={500} setAnswer={setAnswer} answer="Marimba"  question={question} cardquestion = "Wooden bars struck with mallets to produce warm, resonant tones" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={500} setAnswer={setAnswer} answer="Vexillology"  question={question} cardquestion = "The study of flags" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={500} setAnswer={setAnswer} answer="When a person says something ack or lame or out of topic in a coversation."  question={question} cardquestion = "''Dayroom''" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
+        <Card number={500} setAnswer={setAnswer} answer="Montana"  question={question} cardquestion = "Helena" setQuestion = {setQuestion} setLastClicked={setLastClicked}></Card>
         {question ? <Module answer={answer} setAnswer={setAnswer} question={question} setQuestion={setQuestion} ></Module> : null}
       </div>
       {/* <Score lastClicked={lastClicked} teamName={scores[0].name} score = {scores[0].score} scores = {scores} setScores={setScores} teamNumber={0}></Score> */}
@@ -134,12 +135,13 @@ return(
     
 )
 }
-function Module({question, setQuestion}) {
+function Module({question, setQuestion, answer }) {
+  const [showAnswer, setShowAnswer] = useState(false)
   const keyHandler = (event)=>{
     if (event.key === 'Tab') {
       // Your logic for when Space key is pressed
       console.log('Tab key pressed!');
-
+      setShowAnswer(true)
     }
   }
   const clickHandler = ()=>{
@@ -149,18 +151,20 @@ function Module({question, setQuestion}) {
     <div className='parentMod' onClick={clickHandler}>
       <div className='mod' onClick={(event)=>event.stopPropagation()}>
         <h1>{question}</h1>
-        <h5 className='reveal' onKeyDown={keyHandler} tabIndex={0}>Press tab 2 times to reveal answer</h5>
+
+        {showAnswer?<h2>{answer}</h2> :<h5 className='reveal' onKeyDown={keyHandler} tabIndex={0}>Press tab 2 times to reveal answer</h5>}
       </div>
     </div>
   )
 }
-function Card({number, question, cardquestion, setQuestion, setLastClicked}) {
+function Card({number, question, cardquestion, setQuestion, setLastClicked, answer, setAnswer}) {
   //create clicked state to keep track of which ones were already clicked.
   const[clicked, setClicked] = useState(false)
   const clickHandler = ()=>{
     setClicked(true)
     setQuestion(cardquestion)
     setLastClicked(number)
+    setAnswer(answer)
     //.style.backgroundColor = "#fffff"
   }
   return(
